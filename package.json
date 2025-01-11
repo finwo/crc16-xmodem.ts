@@ -1,0 +1,31 @@
+{
+  "name": "@finwo/crc16-xmodem",
+  "version": "1.0.0",
+  "description": "Single-purpose package to generate crc16-xmodem codes",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node util/build.js",
+    "postpublish": "PACKAGE_VERSION=$(jq -r .version < package.json) && PACKAGE_NAME=$(jq -r .name < package.json) && npm deprecate \"${PACKAGE_NAME}@<${PACKAGE_VERSION}\" \"Rolling release, please update to ${PACKAGE_VERSION}\"",
+    "test": "find test -name '*.ts' | sort | xargs -P 1 -n 1 npx ts-node"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/tape": "^5.8.0",
+    "esbuild": "^0.24.2",
+    "esbuild-plugin-d.ts": "^1.3.1",
+    "fast-glob": "^3.3.3",
+    "tape": "^5.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finwo/stream-packetize-js.git"
+  },
+  "author": "Yersa Nordman <finwo@pm.me>",
+  "funding": "https://github.com/sponsors/finwo",
+  "license": "MIT-0"
+}
