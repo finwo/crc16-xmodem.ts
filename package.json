@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/finwo/stream-packetize-js.git"
+    "url": "git+https://github.com/finwo/crc16-xmodem.ts.git"
   },
   "author": "Yersa Nordman <finwo@pm.me>",
   "funding": "https://github.com/sponsors/finwo",
