@@ -1,6 +1,6 @@
 {
   "name": "@finwo/crc16-xmodem",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Single-purpose package to generate crc16-xmodem codes",
   "main": "dist/index.js",
   "scripts": {
