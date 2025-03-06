@@ -16,7 +16,7 @@ for(let i=0 ; i < 256 ; i++) {
   crcTable[i] = virt + (i << 16); // Re-mix in i, to clear higher bits during calculation
 }
 
-export function crc16(subject: Buffer): number {
+export function crc16(subject: Buffer | Uint8Array): number {
   let result = init;
   for(let i = 0 ; i < subject.length ; i++) {
     result  = ((result << 8) + subject[i]) ^ crcTable[result >> 8];
@@ -24,7 +24,7 @@ export function crc16(subject: Buffer): number {
   return result ^ xorout;
 }
 
-export function crc16b(subject: Buffer): Buffer {
+export function crc16b(subject: Buffer | Uint8Array): Buffer {
   const result = Buffer.alloc(2);
   result.writeUInt16BE(crc16(subject));
   return result;
